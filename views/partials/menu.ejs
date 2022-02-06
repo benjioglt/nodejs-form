@@ -1,0 +1,29 @@
+
+<div style="display: flex!important;
+justify-content: space-evenly!important;
+font-size: 40px!important;
+padding-top: 30px!important;">
+    <a class="<% if (title === 'Home') { %> active <% } %> item" href="/" 
+    style="text-decoration: none;color: white;">
+        <i class="home icon"></i> Home
+    </a>
+    <% if (isAuth) { %>
+    <a class="<% if (title === 'Dashboard') { %> active <% } %> item" href="/dashboard"
+        style="text-decoration: none;color: white;">
+         Dashboard
+    </a>
+    <a class="<% if (title === 'Logout') { %> active <% } %> item" href="/logout"
+        style="text-decoration: none;color: white;">
+         Logout
+    </a>
+    <% } else { %>
+        <a class="<% if (title === 'Register') { %> active <% } %> item" href="/register"
+            style="text-decoration: none;color: white;">
+         Register
+        </a>
+        <a class="<% if (title === 'Login') { %> active <% } %> item" href="/login"
+            style="text-decoration: none;color: white;">
+         Login
+        </a>
+    <% } %>
+</div>

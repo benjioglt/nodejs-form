@@ -1,0 +1,36 @@
+<% if (error) { %>
+    <div>
+        <div class="header">
+            <%= error.param.charAt(0).toUpperCase() + error.param.slice(1) %>
+        </div>
+        <ul class="list">
+            <li><%= error.msg %></li>
+        </ul>
+    </div>
+    <% } %>
+    <form method="POST" action="/register">
+        <div>
+            <div>
+                <input type="text" name="firstName" placeholder="Prénom" value="<%= user.firstName %>" 
+                    style="padding: 10px;width: 500px;text-align: center;">
+            </div>
+            <div>
+                <input type="text" name="lastName" placeholder="Nom" value="<%= user.lastName %>"
+                    style="padding: 10px;width: 500px;text-align: center;">
+            </div>
+            <div>
+                <input type="text" name="email" placeholder="E-mail" value="<%= user.email %>"
+                    style="padding: 10px;width: 500px;text-align: center;">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Mot de passe"
+                    style="padding: 10px;width: 500px;text-align: center;">
+            </div>
+            <div>
+                <input type="password" name="passwordConfirm" placeholder="Mot de passe"
+                    style="padding: 10px;width: 500px;text-align: center;">
+            </div>
+                <input type="submit" value="Register"
+                    style="width: 300px;margin-top: 30px;padding: 20px;">
+        </div>
+    </form>

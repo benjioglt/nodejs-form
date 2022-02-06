@@ -1,0 +1,27 @@
+
+
+<% if (error) { %>
+<div>
+    <div class="header">
+        <%= error.param.charAt(0).toUpperCase() + error.param.slice(1) %>
+    </div>
+    <ul class="list">
+        <li><%= error.msg %></li>
+    </ul>
+</div>
+<% } %>
+<form method="POST" action="/login">
+    <div>
+        <div>
+            <input type="text" name="email" placeholder="E-mail address" value="<%= user.email %>"
+            style="padding: 10px;width: 500px;text-align: center;">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Password"
+            style="padding: 10px;width: 500px;text-align: center;">
+        </div>
+    </div>
+        <input type="submit" value="Login"
+        style="width: 300px;margin-top: 30px;padding: 20px;">
+    </div>
+</form>
